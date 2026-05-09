@@ -1,28 +1,270 @@
-@media(max-width:992px){
+@media (max-width: 1100px) {
+    .brand-logo-header {
+        max-width: 285px;
+    }
 
-.hero-container {
-    flex-direction:column;
+    .nav-link,
+    .dropdown-menu a {
+        padding-inline: 10px;
+        font-size: 0.86rem;
+    }
+
+    .hero-container,
+    .split-grid,
+    .product-container,
+    .contact-grid,
+    .map-container {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-visual {
+        min-height: 430px;
+    }
+
+    .hero::after {
+        right: -22vw;
+        width: min(860px, 92vw);
+        opacity: 0.3;
+    }
+
+    .services-grid,
+    .projects-grid,
+    .testimonials-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .partners-logos {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .contributors-wrap {
+        grid-template-columns: 1fr;
+    }
 }
 
-.services-grid {
-    grid-template-columns:repeat(2,1fr);
+@media (max-width: 920px) {
+    .brand-logo-header {
+        height: 48px;
+        max-width: min(255px, 62vw);
+    }
+
+    .mobile-toggle {
+        display: block;
+        position: relative;
+        z-index: 1101;
+    }
+
+    .site-nav {
+        position: fixed;
+        inset: 0;
+        z-index: 1100;
+        display: flex;
+        justify-content: flex-end;
+        pointer-events: none;
+        background: rgba(0, 0, 0, 0);
+        transition: background 260ms ease;
+    }
+
+    body.nav-open .site-nav {
+        pointer-events: auto;
+        background: rgba(0, 0, 0, 0.42);
+    }
+
+    .site-nav ul {
+        width: min(390px, 86vw);
+        min-height: 100vh;
+        align-items: stretch;
+        flex-direction: column;
+        gap: 8px;
+        padding: 104px 22px 28px;
+        background:
+            linear-gradient(160deg, rgba(17, 17, 17, 0.98), rgba(66, 66, 66, 0.98)),
+            repeating-linear-gradient(135deg, rgba(255, 111, 0, 0.12) 0 2px, transparent 2px 18px);
+        box-shadow: -20px 0 60px rgba(0, 0, 0, 0.3);
+        transform: translateX(105%);
+        transition: transform 320ms ease;
+    }
+
+    body.nav-open .site-nav ul {
+        transform: translateX(0);
+    }
+
+    .nav-link,
+    .dropdown-menu a {
+        width: 100%;
+        min-height: 50px;
+        padding: 12px 0;
+        font-size: 1.05rem;
+    }
+
+    .nav-link::after,
+    .dropdown-menu a::after {
+        left: 0;
+        right: 0;
+    }
+
+    .nav-cta {
+        justify-content: center;
+        margin: 10px 0 0;
+        padding: 13px 18px;
+    }
+
+    .has-dropdown {
+        display: grid;
+        grid-template-columns: 1fr 42px;
+    }
+
+    .dropdown-toggle {
+        width: 42px;
+        height: 50px;
+        margin-left: 0;
+    }
+
+    .dropdown-menu {
+        position: static;
+        grid-column: 1 / -1;
+        min-width: 0;
+        max-height: 0;
+        padding: 0 0 0 14px;
+        border: 0;
+        box-shadow: none;
+        opacity: 1;
+        visibility: visible;
+        overflow: hidden;
+        transform: none;
+        background: transparent;
+        transition: max-height 260ms ease, padding 260ms ease;
+    }
+
+    .has-dropdown.open .dropdown-menu {
+        max-height: 80px;
+        padding: 0 0 8px 14px;
+    }
+
+    .team-grid,
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
+@media (max-width: 700px) {
+    .container {
+        width: min(100% - 28px, 1180px);
+    }
+
+    section {
+        padding: 82px 0;
+    }
+
+    .hero {
+        min-height: auto;
+        padding: 132px 0 78px;
+    }
+
+    .brand-logo-header {
+        height: 42px;
+        max-width: min(215px, 58vw);
+    }
+
+    .hero::after {
+        top: 25%;
+        right: -50vw;
+        width: 128vw;
+        opacity: 0.22;
+        filter: blur(3px) saturate(1.1) contrast(1.05);
+    }
+
+    .hero-actions,
+    .footer-bottom-inner {
+        flex-direction: column;
+    }
+
+    .hero-metrics,
+    .team-grid,
+    .services-grid,
+    .projects-grid,
+    .testimonials-grid,
+    .partners-logos,
+    .about-media-grid,
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-grid {
+        gap: 28px;
+        padding-top: 48px;
+    }
+
+    .hero-visual {
+        min-height: 240px;
+    }
+
+    .hero-metrics span {
+        font-size: 0.76rem;
+    }
+
+    .craft-row {
+        grid-template-columns: 1fr;
+    }
+
+    .large-placeholder,
+    .image-upload-placeholder {
+        min-height: 220px;
+    }
+
+    .product-visual {
+        min-height: 380px;
+    }
+
+    .magazine-frame {
+        min-height: 370px;
+    }
+
+    .magazine-frame strong {
+        font-size: 2.65rem;
+    }
+
+    .contributor-card {
+        grid-template-columns: 1fr;
+    }
+
+    .contributor-image-placeholder {
+        width: 100%;
+        max-width: 150px;
+    }
+
+    .map-frame,
+    .map-frame iframe {
+        min-height: 320px;
+    }
 }
 
-@media(max-width:768px){
+@media (max-width: 440px) {
+    .brand-logo-header {
+        height: 36px;
+        max-width: min(178px, 54vw);
+    }
 
-nav ul {
-    flex-direction:column;
-    display:none;
-}
+    .brand-logo-footer {
+        width: min(100%, 235px);
+    }
 
-.services-grid {
-    grid-template-columns:1fr;
-}
+    .hero-metrics div,
+    .team-card,
+    .service-card,
+    .project-content,
+    .testimonial-card,
+    .contributor-card,
+    .map-copy,
+    .contact-form {
+        padding: 22px;
+    }
 
-.hero img {
-    width:100%;
-}
+    .hero-metrics {
+        grid-template-columns: 1fr;
+    }
 
+    .btn {
+        width: 100%;
+    }
 }

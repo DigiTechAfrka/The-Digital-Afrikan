@@ -3,180 +3,437 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The Digital Afrikan is a premium Afrikan consulting agency for strategy, digital products, publishing, and brand storytelling.">
 
-    <title>The Digital Afrikan | Digital Agency & Publishing</title>
+    <title>The Digital Afrikan | Digital Consulting Agency</title>
 
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <script src="main.js" defer></script>
 </head>
 
 <body>
+    <a class="skip-link" href="#main">Skip to content</a>
 
-<header>
-    <div class="container header-container">
-        <a href="#" class="logo">
-            <img src="images/TDALOGO.png" alt="The Digital Afrikan" style="height:60px;">
-        </a>
+    <header class="site-header" id="siteHeader">
+        <div class="container header-container">
+            <a href="#home" class="brand" aria-label="The Digital Afrikan homepage">
+                <img src="images/tda-logo-landscape-white.png" alt="The Digital Afrikan" class="brand-logo brand-logo-header">
+            </a>
 
-        <div class="mobile-toggle" id="mobileToggle">
-            <i class="fas fa-bars"></i>
+            <button class="mobile-toggle" id="mobileToggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="navMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="site-nav" aria-label="Primary navigation">
+                <ul id="navMenu">
+                    <li><a href="#home" class="nav-link active">Homepage</a></li>
+                    <li class="nav-item has-dropdown">
+                        <a href="#about" class="nav-link">About Us</a>
+                        <button class="dropdown-toggle" type="button" aria-label="Open About submenu" aria-expanded="false">
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <ul class="dropdown-menu" aria-label="About submenu">
+                            <li><a href="#team">Team</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#projects" class="nav-link">Our Projects</a></li>
+                    <li><a href="#services" class="nav-link">Our Services</a></li>
+                    <li><a href="#partners" class="nav-link">Partners</a></li>
+                    <li><a href="#contact" class="nav-link nav-cta">Contact Us</a></li>
+                </ul>
+            </nav>
         </div>
+    </header>
 
-        <nav>
-            <ul id="navMenu">
-                <li><a href="#home" class="active">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#product">SA Homeschooling</a></li>
-                <li><a href="#partners">Partners</a></li>
-                <li><a href="#contact" class="btn">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
-
-<!-- HERO -->
-<section class="hero" id="home">
-    <div class="container hero-container">
-
-        <div class="hero-content">
-            <h1>Amplifying African Stories Through Digital Innovation</h1>
-            <p>We are a South African digital media company telling African stories through journalism, tech and publishing.</p>
-            <a href="#services" class="btn">Explore Services</a>
-        </div>
-
-        <div class="hero-image">
-            <img src="images/Copy.png" alt="Hero Image">
-        </div>
-
-    </div>
-</section>
-
-<!-- ABOUT -->
-<section class="about-section" id="about">
-    <div class="container about-container">
-
-        <div class="about-content">
-            <h2>About The Digital Afrikan</h2>
-            <p>We create and publish African-focused digital content across multiple platforms.</p>
-
-            <div class="stats">
-                <div class="stat-item">
-                    <div class="stat-number">4+</div>
-                    <p>Years Experience</p>
+    <main id="main">
+        <section class="hero section-pattern" id="home">
+            <div class="hero-orbit" aria-hidden="true"></div>
+            <div class="star-field" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="container hero-container">
+                <div class="hero-content reveal">
+                    <span class="eyebrow">Afrikan strategy, media and digital craft</span>
+                    <h1>Amplifying African Stories Through Digital Innovation</h1>
+                    <p>A South African digital media company and publishing house telling African stories through data-driven journalism, technology reporting, and impactful digital publishing. We create targeted, high-quality content that connects your story with the right audience.</p>
+                    <div class="hero-actions">
+                        <a href="#services" class="btn btn-primary">Explore Services</a>
+                        <a href="#projects" class="btn btn-ghost">View Projects</a>
+                    </div>
+                    <div class="hero-metrics" aria-label="Agency highlights">
+                        <div>
+                            <strong>04+</strong>
+                            <span>Years shaping digital narratives</span>
+                        </div>
+                        <div>
+                            <strong>50k+</strong>
+                            <span>Monthly reader touchpoints</span>
+                        </div>
+                        <div>
+                            <strong>360</strong>
+                            <span>Strategy, build and publishing support</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="stat-item">
-                    <div class="stat-number">50k+</div>
-                    <p>Monthly Readers</p>
+
+                <div class="hero-visual hero-logo-space reveal" aria-hidden="true"></div>
+            </div>
+        </section>
+
+        <section class="about-section" id="about">
+            <div class="container split-grid">
+                <div class="section-copy reveal">
+                    <span class="eyebrow">About Us</span>
+                    <h2>About The Digital Afrikan</h2>
+                    <h3 class="section-kicker">Telling African Stories Through Digital Innovation</h3>
+                    <p>The Digital Afrikan (Pty) Ltd is a South African digital media company and publishing house founded by Earl Joseph to counteract the underrepresentation of African perspectives in digital spaces.</p>
+                    <p>We curate, create, and publish high-quality, factual, and engaging multimedia content aimed at African and global audiences through a multi-platform approach.</p>
+                    <p>Our work spans data-driven journalism, technology reporting, education-focused content, and platform-based publishing models that serve both consumer audiences and corporate clients.</p>
+                </div>
+
+                <div class="about-media-grid reveal">
+                    <div class="image-upload-placeholder large-placeholder">
+                        <i class="fa-solid fa-image"></i>
+                        <span>Future image upload</span>
+                    </div>
+                    <div class="image-upload-placeholder">
+                        <i class="fa-solid fa-camera-retro"></i>
+                        <span>Editorial moments</span>
+                    </div>
+                    <div class="image-upload-placeholder">
+                        <i class="fa-solid fa-pen-nib"></i>
+                        <span>Publishing craft</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="team-section section-alt" id="team">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <span class="eyebrow">Team</span>
+                    <h2>The people behind the craft</h2>
+                    <p>Placeholder team profiles are ready for future bios, portraits, and leadership details.</p>
+                </div>
+
+                <div class="team-grid">
+                    <article class="team-card reveal">
+                        <div class="avatar-placeholder"><i class="fa-solid fa-user-astronaut"></i></div>
+                        <h3>Team Member Name</h3>
+                        <span>Strategy Lead</span>
+                        <p>Short description for future profile details, expertise, and consulting focus.</p>
+                    </article>
+                    <article class="team-card reveal">
+                        <div class="avatar-placeholder"><i class="fa-solid fa-user-pen"></i></div>
+                        <h3>Team Member Name</h3>
+                        <span>Creative Director</span>
+                        <p>Short description for storytelling, content design, and brand-building experience.</p>
+                    </article>
+                    <article class="team-card reveal">
+                        <div class="avatar-placeholder"><i class="fa-solid fa-code"></i></div>
+                        <h3>Team Member Name</h3>
+                        <span>Digital Product Lead</span>
+                        <p>Short description for web, product, automation, and technical implementation.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="services" id="services">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <span class="eyebrow">Our Services</span>
+                    <h2>Consulting that moves from idea to impact.</h2>
+                    <p>Designed for brands that need strategy, execution, and long-term digital momentum.</p>
+                </div>
+
+                <div class="services-grid">
+                    <article class="service-card reveal">
+                        <i class="fa-solid fa-chart-line service-icon"></i>
+                        <h3>SEO Storytelling</h3>
+                        <p>Audience-led content architecture, search optimisation, and editorial systems.</p>
+                        <a href="#contact">Start planning <i class="fa-solid fa-arrow-right"></i></a>
+                    </article>
+                    <article class="service-card reveal">
+                        <i class="fa-solid fa-bullseye service-icon"></i>
+                        <h3>Digital Marketing</h3>
+                        <p>Campaign strategy, social media direction, analytics, and conversion paths.</p>
+                        <a href="#contact">Build momentum <i class="fa-solid fa-arrow-right"></i></a>
+                    </article>
+                    <article class="service-card reveal">
+                        <i class="fa-solid fa-laptop-code service-icon"></i>
+                        <h3>Web Development</h3>
+                        <p>Fast, responsive websites and platforms shaped around user experience.</p>
+                        <a href="#contact">Design the platform <i class="fa-solid fa-arrow-right"></i></a>
+                    </article>
+                    <article class="service-card reveal">
+                        <i class="fa-solid fa-newspaper service-icon"></i>
+                        <h3>Publishing</h3>
+                        <p>Digital magazines, media products, article workflows, and content operations.</p>
+                        <a href="#contact">Publish better <i class="fa-solid fa-arrow-right"></i></a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="projects-section section-alt" id="projects">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <span class="eyebrow">Our Projects</span>
+                    <h2>Future case studies, already framed with care.</h2>
+                    <p>These polished placeholders are ready for real project images, outcomes, and service details.</p>
+                </div>
+
+                <div class="projects-grid">
+                    <article class="project-card reveal">
+                        <div class="project-image-placeholder">
+                            <i class="fa-solid fa-layer-group"></i>
+                        </div>
+                        <div class="project-content">
+                            <span>Digital Platform</span>
+                            <h3>Project Title Placeholder</h3>
+                            <p>Short description of the project objective, user problem, and measurable impact.</p>
+                            <div class="tag-row">
+                                <span>UX Strategy</span>
+                                <span>Web</span>
+                                <span>Content</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="project-card reveal">
+                        <div class="project-image-placeholder">
+                            <i class="fa-solid fa-globe-africa"></i>
+                        </div>
+                        <div class="project-content">
+                            <span>Brand Storytelling</span>
+                            <h3>Project Title Placeholder</h3>
+                            <p>Short description of the publishing, campaign, or media system delivered.</p>
+                            <div class="tag-row">
+                                <span>SEO</span>
+                                <span>Editorial</span>
+                                <span>Analytics</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="project-card reveal">
+                        <div class="project-image-placeholder">
+                            <i class="fa-solid fa-mobile-screen-button"></i>
+                        </div>
+                        <div class="project-content">
+                            <span>Creative Technology</span>
+                            <h3>Project Title Placeholder</h3>
+                            <p>Short description of the product experience, interface, and digital growth layer.</p>
+                            <div class="tag-row">
+                                <span>Product</span>
+                                <span>Automation</span>
+                                <span>Design</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="product-section" id="product">
+            <div class="container product-container">
+                <div class="product-visual reveal">
+                    <a href="https://sahomeschooling.com/magazine" class="magazine-frame" target="_blank" rel="noopener" aria-label="Open the SA Homeschooling magazine">
+                        <span>SA Homeschooling</span>
+                        <strong>Digital Magazine</strong>
+                        <small>https://sahomeschooling.com/magazine</small>
+                        <div class="magazine-lines" aria-hidden="true">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="section-copy reveal">
+                    <span class="eyebrow">Featured Platform</span>
+                    <h2>SA Homeschooling</h2>
+                    <p>Launched in 2020 as a digital magazine, SA Homeschooling has grown to become South Africa's most trusted resource for homeschooling parents, students, and educators.</p>
+                    <p>Our mission is to empower parents in their homeschooling journey by providing encouragement, practical assistance, and curriculum-aligned resources.</p>
+                    <p>We feature expert columns like "Ask Dalena" with cognitive development specialist Dalena van der Westhuizen, and family-friendly recipes from homeschooler Anri Fouri.</p>
+                    <a href="https://sahomeschooling.com/" class="btn btn-primary" target="_blank" rel="noopener">Visit Site</a>
+                </div>
+            </div>
+            <div class="container contributors-wrap">
+                <article class="contributor-card reveal">
+                    <div class="contributor-image-placeholder">
+                        <i class="fa-solid fa-user-graduate"></i>
+                    </div>
+                    <div>
+                        <h3>Dalena van der Westhuizen</h3>
+                        <p>Cognitive Development Specialist</p>
+                    </div>
+                </article>
+                <article class="contributor-card reveal">
+                    <div class="contributor-image-placeholder">
+                        <i class="fa-solid fa-bowl-food"></i>
+                    </div>
+                    <div>
+                        <h3>Anri Fouri</h3>
+                        <p>Homeschooling Parent &amp; Recipe Contributor</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="partners-section section-alt" id="partners">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <span class="eyebrow">Partners</span>
+                    <h2>Collaboration across the digital ecosystem.</h2>
+                    <p>Partner spaces are styled for logos and future alliance details.</p>
+                </div>
+
+                <div class="partners-logos">
+                    <a href="#contact" class="partner-card reveal">TAYA</a>
+                    <a href="#contact" class="partner-card reveal">CIVIC</a>
+                    <a href="#contact" class="partner-card reveal">AWS</a>
+                    <a href="#contact" class="partner-card reveal">INIX</a>
+                    <a href="#contact" class="partner-card reveal">DAILY</a>
+                    <a href="#contact" class="partner-card reveal">M&amp;G</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials-section" id="testimonials">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <span class="eyebrow">Testimonials</span>
+                    <h2>Trusted by research and innovation leaders.</h2>
+                </div>
+
+                <div class="testimonials-grid">
+                    <article class="testimonial-card reveal">
+                        <div class="quote-mark" aria-hidden="true"><i class="fa-solid fa-quote-left"></i></div>
+                        <p>The Digital Afrikan provides a unique, innovative and creative service. They optimised ~ and published our content with The Daily Maverick as well as on TikTok, Linkedin and Whatsapp.</p>
+                        <div class="testimonial-person">
+                            <strong>Davis Cook</strong>
+                            <span>Chairman, Research Institute for Innovation and Sustainability (RIIS)</span>
+                        </div>
+                    </article>
+                    <article class="testimonial-card reveal">
+                        <div class="quote-mark" aria-hidden="true"><i class="fa-solid fa-quote-left"></i></div>
+                        <p>As a research centre, Wits Tayarisha needed a media partner to expose our research to the world and to invite public engagement with the centre. The Digital Afrikan delivered on every front from curating articles, to advising us, to leveraging across media platforms.</p>
+                        <div class="testimonial-person">
+                            <strong>Prof. Geci Karuri-Sebina</strong>
+                            <span>Wits School of Governance (Tayarisha)</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-section" id="contact">
+            <div class="container contact-grid">
+                <div class="section-copy reveal">
+                    <span class="eyebrow">Contact Us</span>
+                    <h2>Let's build something powerful and beautifully considered.</h2>
+                    <p>Tell us what you are shaping. We will help clarify the opportunity, define the next move, and create a digital experience that carries the work well.</p>
+                    <div class="contact-points">
+                        <a href="mailto:info@digitalafrikan.com"><i class="fa-solid fa-envelope"></i> info@digitalafrikan.com</a>
+                        <a href="#map"><i class="fa-solid fa-location-dot"></i> 41 Juta Street, Tshimologong Precinct, Braamfontein, Johannesburg</a>
+                    </div>
+                </div>
+
+                <form class="contact-form reveal" id="contactForm" novalidate>
+                    <div class="form-row">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your name" required>
+                        <small class="error-message">Please enter your name.</small>
+                    </div>
+                    <div class="form-row">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                        <small class="error-message">Please enter a valid email address.</small>
+                    </div>
+                    <div class="form-row">
+                        <label for="service">What do you need?</label>
+                        <select id="service" name="service" required>
+                            <option value="">Select a service</option>
+                            <option>Strategy Consulting</option>
+                            <option>Digital Marketing</option>
+                            <option>Web Development</option>
+                            <option>Publishing Support</option>
+                        </select>
+                        <small class="error-message">Please select a service.</small>
+                    </div>
+                    <div class="form-row">
+                        <label for="message">Project details</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Share a short brief" required></textarea>
+                        <small class="error-message">Please share a few details.</small>
+                    </div>
+                    <button type="submit" class="btn btn-primary form-submit">Send Enquiry</button>
+                    <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+                </form>
+            </div>
+            <div class="container map-container reveal" id="map">
+                <div class="map-copy">
+                    <span class="eyebrow">Find Us</span>
+                    <h2>41 Juta Street, Tshimologong Precinct, Braamfontein, Johannesburg</h2>
+                </div>
+                <div class="map-frame">
+                    <iframe title="Map showing 41 Juta Street, Tshimologong Precinct, Braamfontein, Johannesburg" src="https://www.google.com/maps?q=41%20Juta%20Street%2C%20Tshimologong%20Precinct%2C%20Braamfontein%2C%20Johannesburg&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div>
+                <a href="#home" class="brand footer-brand">
+                    <img src="images/tda-logo-stacked-white.png" alt="The Digital Afrikan" class="brand-logo brand-logo-footer">
+                </a>
+                <p>Strategy, storytelling, publishing, and digital product craft for Afrikan-centred brands.</p>
+            </div>
+            <div>
+                <h3>Explore</h3>
+                <a href="#about">About Us</a>
+                <a href="#team">Team</a>
+                <a href="#projects">Our Projects</a>
+                <a href="#services">Our Services</a>
+            </div>
+            <div>
+                <h3>Connect</h3>
+                <a href="#partners">Partners</a>
+                <a href="#contact">Contact Us</a>
+                <a href="https://sahomeschooling.com/magazine" target="_blank" rel="noopener">SA Homeschooling</a>
+            </div>
+            <div>
+                <h3>Social</h3>
+                <div class="social-links" aria-label="Social links">
+                    <a href="#contact" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#contact" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#contact" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
                 </div>
             </div>
         </div>
-
-        <div class="about-image">
-            <img src="images/news-removebg-preview.png" alt="About Image">
-        </div>
-
-    </div>
-</section>
-
-<!-- SERVICES -->
-<section class="services" id="services">
-    <div class="container">
-
-        <h2 class="section-header">What We Do</h2>
-
-        <div class="services-grid">
-
-            <div class="service-card">
-                <i class="fas fa-chart-line service-icon"></i>
-                <h3>SEO Storytelling</h3>
-                <p>Data-driven content strategy and optimisation.</p>
+        <div class="footer-bottom">
+            <div class="container footer-bottom-inner">
+                <p>&copy; 2026 The Digital Afrikan. All rights reserved.</p>
+                <p>SA Homeschooling</p>
             </div>
-
-            <div class="service-card">
-                <i class="fas fa-bullseye service-icon"></i>
-                <h3>Digital Marketing</h3>
-                <p>Social media and campaign management.</p>
-            </div>
-
-            <div class="service-card">
-                <i class="fas fa-laptop-code service-icon"></i>
-                <h3>Web Development</h3>
-                <p>Modern responsive websites and apps.</p>
-            </div>
-
-            <div class="service-card">
-                <i class="fas fa-newspaper service-icon"></i>
-                <h3>Publishing</h3>
-                <p>Digital magazines and media content.</p>
-            </div>
-
         </div>
-
-    </div>
-</section>
-
-<!-- PRODUCT -->
-<section class="product-section" id="product">
-    <div class="container product-container">
-
-        <div class="product-image">
-            <img src="images/Screenshot 2026-01-07 095724.png" alt="SA Homeschooling">
-        </div>
-
-        <div class="product-content">
-            <h2>SA Homeschooling</h2>
-            <p>South Africa’s leading homeschooling digital magazine.</p>
-            <a href="https://sahomeschooling.com" class="btn">Visit Site</a>
-        </div>
-
-    </div>
-</section>
-
-<!-- PARTNERS -->
-<section class="partners-section" id="partners">
-    <div class="container">
-
-        <h2>Our Partners</h2>
-
-        <div class="partners-logos">
-            <img src="images/Partners/TAYA.png">
-            <img src="images/Partners/CIVIC.png">
-            <img src="images/Partners/AWS.png">
-            <img src="images/Partners/inix.png">
-            <img src="images/Partners/Daily.png">
-            <img src="images/Partners/M&G.png">
-        </div>
-
-    </div>
-</section>
-
-<!-- CTA -->
-<section class="cta-section" id="contact">
-    <div class="container">
-        <h2>Let’s Build Something Powerful</h2>
-        <a href="#" class="btn">Contact Us</a>
-    </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-    <div class="container">
-        <p>© 2026 The Digital Afrikan</p>
-    </div>
-</footer>
-
-<script src="js/main.js"></script>
-
+    </footer>
 </body>
 </html>
