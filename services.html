@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Digital services from The Digital Afrikan.">
+    <title>The Digital Afrikan | Our Craft</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header" id="siteHeader">
+        <div class="container header-container">
+            <a href="index.html" class="brand" aria-label="The Digital Afrikan homepage"><img src="images/tda-logo-landscape-white.png" alt="The Digital Afrikan" class="brand-logo brand-logo-header"></a>
+            <button class="mobile-toggle" id="mobileToggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="navMenu"><span></span><span></span><span></span></button>
+            <nav class="site-nav" aria-label="Primary navigation">
+                <ul id="navMenu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item has-dropdown"><a href="about.html" class="nav-link">About Us</a><button class="dropdown-toggle" type="button" aria-label="Open About submenu" aria-expanded="false"><i class="fa-solid fa-chevron-down"></i></button><ul class="dropdown-menu" aria-label="About submenu"><li><a href="about.html">About Us</a></li><li><a href="team.html">Team</a></li></ul></li>
+                    <li><a href="projects.html" class="nav-link">Our Work</a></li>
+                    <li><a href="services.html" class="nav-link active">Our Craft</a></li>
+                    <li><a href="products.html" class="nav-link">Products</a></li><li><a href="partners.html" class="nav-link">Partners</a></li>
+                    <li><a href="contact.html" class="nav-link nav-cta">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main id="main">
+        <section class="page-hero section-pattern">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <span class="eyebrow">Our Craft</span>
+                    <h1>Digital solutions for strategy, publishing, and growth.</h1>
+                    <p>We help brands clarify their message, build their platforms, and reach the audiences that matter.</p>
+                </div>
+            </div>
+        </section>
+        <section class="services">
+            <div class="container">
+                <div class="services-grid">
+                    <button class="service-card detail-modal-trigger reveal" type="button" data-title="SEO Storytelling" data-kicker="Service" data-icon="fa-chart-line" data-body="Audience-led content architecture, search optimisation, and editorial systems that help the right readers find the right stories." data-focus="Keyword strategy, content planning, editorial systems, search-friendly publishing, and performance reporting."><i class="fa-solid fa-chart-line service-icon"></i><h3>SEO Storytelling</h3><p>Audience-led content architecture, search optimisation, and editorial systems.</p></button>
+                    <button class="service-card detail-modal-trigger reveal" type="button" data-title="Digital Marketing" data-kicker="Service" data-icon="fa-bullseye" data-body="Campaign strategy, social media direction, analytics, and conversion paths designed to build useful momentum." data-focus="Campaign planning, social media strategy, paid and organic content direction, analytics, and audience journeys."><i class="fa-solid fa-bullseye service-icon"></i><h3>Digital Marketing</h3><p>Campaign strategy, social media direction, analytics, and conversion paths.</p></button>
+                    <button class="service-card detail-modal-trigger reveal" type="button" data-title="Web Development" data-kicker="Service" data-icon="fa-laptop-code" data-body="Fast, responsive websites and platforms shaped around brand clarity, performance, and user experience." data-focus="Responsive websites, landing pages, CMS setup, platform improvements, performance, and usability."><i class="fa-solid fa-laptop-code service-icon"></i><h3>Web Development</h3><p>Fast, responsive websites and platforms shaped around user experience.</p></button>
+                    <button class="service-card detail-modal-trigger reveal" type="button" data-title="Publishing" data-kicker="Service" data-icon="fa-newspaper" data-body="Digital magazines, media products, article workflows, and content operations for teams that need publishing consistency." data-focus="Digital magazines, editorial calendars, article workflows, publishing systems, and content governance."><i class="fa-solid fa-newspaper service-icon"></i><h3>Publishing</h3><p>Digital magazines, media products, article workflows, and content operations.</p></button>
+                </div>
+            </div>
+        </section>
+        <div class="team-modal" id="detailModal" aria-hidden="true">
+            <div class="team-modal-panel" role="dialog" aria-modal="true" aria-labelledby="detailModalTitle" tabindex="-1">
+                <button class="modal-close" type="button" aria-label="Close details"><i class="fa-solid fa-xmark"></i></button>
+                <div class="avatar-placeholder modal-avatar"><i class="fa-solid fa-chart-line" id="detailModalIcon"></i></div>
+                <span class="eyebrow" id="detailModalKicker">Service</span>
+                <h2 id="detailModalTitle">Service</h2>
+                <p id="detailModalBody">More details will appear here.</p>
+                <div class="modal-focus">
+                    <strong>Focus areas</strong>
+                    <p id="detailModalFocus">Focus areas will appear here.</p>
+                </div>
+                <a href="contact.html" class="btn btn-primary modal-action">Contact Us</a>
+            </div>
+        </div>
+    </main>
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div><a href="index.html" class="brand footer-brand"><img src="images/tda-logo-stacked-white.png" alt="The Digital Afrikan" class="brand-logo brand-logo-footer"></a><p>Strategy, storytelling, publishing, and digital product craft for Afrikan-centred brands.</p></div>
+            <div><h3>Explore</h3><a href="about.html">About Us</a><a href="team.html">Team</a><a href="projects.html">Our Work</a><a href="services.html">Our Craft</a><a href="products.html">Products</a></div>
+            <div><h3>Connect</h3><a href="partners.html">Partners</a><a href="contact.html">Contact Us</a><a href="https://sahomeschooling.com/magazine" target="_blank" rel="noopener">SA Homeschooling</a></div>
+            <div><h3>Social</h3><div class="social-links" aria-label="Social links"><a href="contact.html" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a><a href="contact.html" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a><a href="contact.html" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a></div></div>
+        </div>
+        <div class="footer-bottom"><div class="container footer-bottom-inner"><p>&copy; 2026 The Digital Afrikan. All rights reserved.</p><p>SA Homeschooling</p></div></div>
+    </footer>
+</body>
+</html>

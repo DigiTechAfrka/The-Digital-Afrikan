@@ -9,22 +9,11 @@
         font-size: 0.86rem;
     }
 
-    .hero-container,
     .split-grid,
     .product-container,
     .contact-grid,
     .map-container {
         grid-template-columns: 1fr;
-    }
-
-    .hero-visual {
-        min-height: 430px;
-    }
-
-    .hero::after {
-        right: -22vw;
-        width: min(860px, 92vw);
-        opacity: 0.3;
     }
 
     .services-grid,
@@ -33,12 +22,27 @@
         grid-template-columns: repeat(2, 1fr);
     }
 
+    .project-feature,
+    .project-feature .project-content,
+    .project-image-panel {
+        min-height: 360px;
+    }
+
     .partners-logos {
         grid-template-columns: repeat(3, 1fr);
     }
 
     .contributors-wrap {
         grid-template-columns: 1fr;
+    }
+
+    .partners-showcase {
+        grid-template-columns: 1fr;
+        gap: 34px;
+    }
+
+    .team-placeholder-grid {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
@@ -78,8 +82,8 @@
         gap: 8px;
         padding: 104px 22px 28px;
         background:
-            linear-gradient(160deg, rgba(17, 17, 17, 0.98), rgba(66, 66, 66, 0.98)),
-            repeating-linear-gradient(135deg, rgba(255, 111, 0, 0.12) 0 2px, transparent 2px 18px);
+            linear-gradient(160deg, rgba(0, 0, 0, 0.98), rgba(21, 21, 24, 0.98)),
+            repeating-linear-gradient(135deg, rgba(74, 7, 24, 0.16) 0 2px, transparent 2px 18px);
         box-shadow: -20px 0 60px rgba(0, 0, 0, 0.3);
         transform: translateX(105%);
         transition: transform 320ms ease;
@@ -137,7 +141,7 @@
     }
 
     .has-dropdown.open .dropdown-menu {
-        max-height: 80px;
+        max-height: 120px;
         padding: 0 0 8px 14px;
     }
 
@@ -157,8 +161,35 @@
     }
 
     .hero {
-        min-height: auto;
+        min-height: max(88svh, 60.05vw);
         padding: 132px 0 78px;
+        background-position: center, center top;
+        background-size: cover, 100% auto;
+    }
+
+    .hero-container {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero h1 span {
+        white-space: normal;
+    }
+
+    .page-hero {
+        min-height: 48vh;
+        padding: 128px 0 62px;
+    }
+
+    .page-hero .section-heading {
+        text-align: center;
+    }
+
+    .page-hero .section-heading .eyebrow {
+        justify-content: center;
     }
 
     .brand-logo-header {
@@ -167,40 +198,73 @@
     }
 
     .hero::after {
-        top: 25%;
-        right: -50vw;
-        width: 128vw;
         opacity: 0.22;
-        filter: blur(3px) saturate(1.1) contrast(1.05);
     }
 
-    .hero-actions,
+    .hero-orbit {
+        left: auto;
+        right: -220px;
+        width: 390px;
+        height: 390px;
+        opacity: 0.34;
+    }
+
     .footer-bottom-inner {
         flex-direction: column;
     }
 
-    .hero-metrics,
     .team-grid,
     .services-grid,
     .projects-grid,
     .testimonials-grid,
     .partners-logos,
+    .partners-logo-grid,
     .about-media-grid,
     .footer-grid {
         grid-template-columns: 1fr;
     }
 
+    .partners-showcase {
+        padding-block: 36px;
+    }
+
+    .partners-copy,
+    .partners-copy p {
+        max-width: none;
+    }
+
+    .partners-logo-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 22px;
+    }
+
+    .team-placeholder-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+    }
+
+    .project-feature {
+        grid-template-columns: 1fr;
+        min-height: 0;
+    }
+
+    .project-feature.is-reversed .project-content,
+    .project-feature.is-reversed .project-image-panel {
+        order: initial;
+    }
+
+    .project-feature .project-content {
+        min-height: 0;
+        padding: 32px 24px;
+    }
+
+    .project-image-panel {
+        min-height: 280px;
+    }
+
     .footer-grid {
         gap: 28px;
-        padding-top: 48px;
-    }
-
-    .hero-visual {
-        min-height: 240px;
-    }
-
-    .hero-metrics span {
-        font-size: 0.76rem;
+        padding-top: 34px;
     }
 
     .craft-row {
@@ -208,7 +272,8 @@
     }
 
     .large-placeholder,
-    .image-upload-placeholder {
+    .image-upload-placeholder,
+    .about-image-card {
         min-height: 220px;
     }
 
@@ -217,7 +282,7 @@
     }
 
     .magazine-frame {
-        min-height: 370px;
+        width: min(100%, 320px);
     }
 
     .magazine-frame strong {
@@ -246,10 +311,9 @@
     }
 
     .brand-logo-footer {
-        width: min(100%, 235px);
+        width: min(100%, 175px);
     }
 
-    .hero-metrics div,
     .team-card,
     .service-card,
     .project-content,
@@ -258,10 +322,6 @@
     .map-copy,
     .contact-form {
         padding: 22px;
-    }
-
-    .hero-metrics {
-        grid-template-columns: 1fr;
     }
 
     .btn {
