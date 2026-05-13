@@ -71,7 +71,9 @@
 
     body.nav-open .site-nav {
         pointer-events: auto;
-        background: rgba(0, 0, 0, 0.42);
+        background: rgba(0, 0, 0, 0.38);
+        -webkit-backdrop-filter: blur(4px);
+        backdrop-filter: blur(4px);
     }
 
     .site-nav ul {
@@ -82,8 +84,11 @@
         gap: 8px;
         padding: 104px 22px 28px;
         background:
-            linear-gradient(160deg, rgba(0, 0, 0, 0.98), rgba(21, 21, 24, 0.98)),
-            repeating-linear-gradient(135deg, rgba(74, 7, 24, 0.16) 0 2px, transparent 2px 18px);
+            linear-gradient(160deg, rgba(5, 4, 5, 0.78), rgba(74, 7, 24, 0.32)),
+            rgba(255, 255, 255, 0.08);
+        -webkit-backdrop-filter: blur(22px) saturate(150%);
+        backdrop-filter: blur(22px) saturate(150%);
+        border-left: 1px solid rgba(255, 255, 255, 0.14);
         box-shadow: -20px 0 60px rgba(0, 0, 0, 0.3);
         transform: translateX(105%);
         transition: transform 320ms ease;
@@ -241,6 +246,28 @@
     .team-placeholder-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 18px;
+    }
+
+    #teamModal .team-member-panel {
+        grid-template-columns: 1fr;
+        min-height: 0;
+    }
+
+    #teamModal .team-modal-info {
+        padding: 82px 28px 32px;
+    }
+
+    #teamModal .modal-portrait {
+        order: -1;
+        min-height: 340px;
+    }
+
+    #teamModal .modal-close {
+        top: 18px;
+        right: 18px;
+        width: 56px;
+        height: 56px;
+        background: rgba(255, 255, 255, 0.82);
     }
 
     .project-feature {
