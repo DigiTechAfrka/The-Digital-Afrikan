@@ -76,16 +76,19 @@
         backdrop-filter: blur(4px);
     }
 
-    .site-nav ul {
-        width: min(390px, 86vw);
-        min-height: 100vh;
+    .site-nav > ul {
+        width: min(390px, 88vw);
+        height: 100dvh;
+        min-height: 100svh;
         align-items: stretch;
         flex-direction: column;
         gap: 8px;
-        padding: 104px 22px 28px;
+        padding: 104px 22px max(28px, env(safe-area-inset-bottom));
+        overflow-y: auto;
+        overscroll-behavior: contain;
         background:
-            linear-gradient(160deg, rgba(5, 4, 5, 0.78), rgba(74, 7, 24, 0.32)),
-            rgba(255, 255, 255, 0.08);
+            linear-gradient(160deg, rgba(5, 4, 5, 0.94), rgba(74, 7, 24, 0.76)),
+            rgba(5, 4, 5, 0.88);
         -webkit-backdrop-filter: blur(22px) saturate(150%);
         backdrop-filter: blur(22px) saturate(150%);
         border-left: 1px solid rgba(255, 255, 255, 0.14);
@@ -94,7 +97,7 @@
         transition: transform 320ms ease;
     }
 
-    body.nav-open .site-nav ul {
+    body.nav-open .site-nav > ul {
         transform: translateX(0);
     }
 
@@ -102,8 +105,11 @@
     .dropdown-menu a {
         width: 100%;
         min-height: 50px;
-        padding: 12px 0;
+        justify-content: flex-start;
+        padding: 12px 4px;
         font-size: 1.05rem;
+        color: rgba(255, 255, 255, 0.94);
+        text-shadow: none;
     }
 
     .nav-link::after,
@@ -121,6 +127,7 @@
     .has-dropdown {
         display: grid;
         grid-template-columns: 1fr 42px;
+        align-items: start;
     }
 
     .dropdown-toggle {
@@ -143,6 +150,12 @@
         transform: none;
         background: transparent;
         transition: max-height 260ms ease, padding 260ms ease;
+    }
+
+    .dropdown-menu a {
+        min-height: 42px;
+        font-size: 0.96rem;
+        color: rgba(255, 255, 255, 0.78);
     }
 
     .has-dropdown.open .dropdown-menu {
@@ -265,9 +278,9 @@
     #teamModal .modal-close {
         top: 18px;
         right: 18px;
-        width: 56px;
-        height: 56px;
-        background: rgba(255, 255, 255, 0.82);
+        height: 42px;
+        padding: 0 14px;
+        background: rgba(255, 255, 255, 0.88);
     }
 
     .project-feature {
@@ -334,7 +347,23 @@
 @media (max-width: 440px) {
     .brand-logo-header {
         height: 36px;
-        max-width: min(178px, 54vw);
+        max-width: min(172px, 52vw);
+    }
+
+    .header-container {
+        min-height: 58px;
+        gap: 14px;
+    }
+
+    .mobile-toggle {
+        width: 42px;
+        height: 42px;
+        flex: 0 0 42px;
+    }
+
+    .site-nav > ul {
+        width: 100vw;
+        padding: 92px 20px max(24px, env(safe-area-inset-bottom));
     }
 
     .brand-logo-footer {

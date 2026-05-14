@@ -153,6 +153,10 @@ textarea {
     flex-wrap: nowrap;
 }
 
+.site-nav li {
+    min-width: 0;
+}
+
 .nav-link,
 .dropdown-menu a {
     position: relative;
@@ -1255,13 +1259,14 @@ h3 {
 #teamModal .modal-close {
     top: clamp(28px, 5vw, 54px);
     right: calc(50% + clamp(28px, 5vw, 72px));
-    width: 72px;
-    height: 72px;
-    border-color: rgba(0, 0, 0, 0.7);
-    border-radius: 50%;
+    width: auto;
+    height: 44px;
+    padding: 0 16px;
+    border-color: rgba(0, 0, 0, 0.16);
+    border-radius: 999px;
     color: #111111;
-    background: transparent;
-    font-size: 1.5rem;
+    background: rgba(255, 255, 255, 0.74);
+    font-size: 0.92rem;
     z-index: 2;
 }
 
@@ -1269,16 +1274,25 @@ h3 {
     position: absolute;
     top: 16px;
     right: 16px;
-    display: grid;
-    place-items: center;
-    width: 42px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: auto;
     height: 42px;
+    padding: 0 14px;
     border: 1px solid rgba(74, 7, 24, 0.16);
-    border-radius: var(--radius);
+    border-radius: 999px;
     color: var(--accent);
     background: white;
     cursor: pointer;
+    font-weight: 800;
+    font-size: 0.88rem;
     transition: transform var(--transition), background var(--transition), color var(--transition);
+}
+
+.modal-close i {
+    font-size: 0.9rem;
 }
 
 .modal-close:hover {
@@ -2059,8 +2073,8 @@ h3 {
     max-width: 140px;
     max-height: 52px;
     object-fit: contain;
-    filter: grayscale(100%);
-    opacity: 0.8;
+    filter: none;
+    opacity: 1;
     transition:
         filter var(--transition),
         opacity var(--transition),
@@ -2068,8 +2082,7 @@ h3 {
 }
 
 .client-logo:hover img {
-    filter: grayscale(0%);
-    opacity: 1;
+    filter: saturate(1.08) contrast(1.04);
     transform: scale(1.05);
 }
 
