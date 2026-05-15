@@ -62,7 +62,14 @@
         display: block;
         position: relative;
         z-index: 1101;
-        justify-self: end;
+    }
+
+    .header-container {
+        justify-content: space-between;
+    }
+
+    .header-container > .brand {
+        position: static;
     }
 
     .site-nav {
@@ -128,8 +135,14 @@
 
     .nav-cta {
         justify-content: center;
+        position: static;
         margin: 10px 0 0;
         padding: 13px 18px;
+        transform: none;
+    }
+
+    .nav-cta:hover {
+        transform: translateY(-2px);
     }
 
     .has-dropdown {

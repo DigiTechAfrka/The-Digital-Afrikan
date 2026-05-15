@@ -112,11 +112,17 @@ textarea {
 }
 
 .header-container {
-    display: grid;
-    grid-template-columns: auto minmax(0, 1fr);
+    position: relative;
+    display: flex;
     align-items: center;
+    justify-content: center;
     gap: 28px;
     min-height: 74px;
+}
+
+.header-container > .brand {
+    position: absolute;
+    left: 0;
 }
 
 .brand {
@@ -143,6 +149,10 @@ textarea {
     height: auto;
     width: min(100%, 190px);
     max-height: 150px;
+}
+
+.site-nav {
+    width: auto;
 }
 
 .site-nav ul {
@@ -202,11 +212,15 @@ textarea {
 }
 
 .nav-cta {
-    margin-left: 24px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-left: 0;
     color: white;
     background: var(--accent);
     border-radius: var(--radius);
     box-shadow: 0 12px 28px rgba(74, 7, 24, 0.28);
+    transform: translateY(-50%);
 }
 
 .nav-cta::after {
@@ -214,7 +228,7 @@ textarea {
 }
 
 .nav-cta:hover {
-    transform: translateY(-2px);
+    transform: translateY(calc(-50% - 2px));
     background: var(--accent-bright);
 }
 
@@ -2160,6 +2174,11 @@ h3 {
 
 .contact-grid {
     align-items: start;
+    justify-items: stretch;
+}
+
+.contact-grid .contact-form {
+    width: 100%;
 }
 
 .contact-points {
