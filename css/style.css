@@ -609,6 +609,24 @@ h1 {
     font-weight: 700;
 }
 
+.two-line-heading span {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    margin-inline: auto;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.page-hero .two-line-heading {
+    max-width: 100%;
+    margin-inline: auto;
+}
+
+.page-hero-work .two-line-heading {
+    font-size: clamp(2.15rem, 4vw, 3.35rem);
+}
+
 .hero h1 {
     max-width: none;
     margin: 0 auto;
