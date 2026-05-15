@@ -112,9 +112,9 @@ textarea {
 }
 
 .header-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
     align-items: center;
-    justify-content: space-between;
     gap: 28px;
     min-height: 74px;
 }
@@ -148,6 +148,7 @@ textarea {
 .site-nav ul {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 6px;
     list-style: none;
     flex-wrap: nowrap;
@@ -165,8 +166,9 @@ textarea {
     min-height: 42px;
     padding: 10px 10px;
     color: rgba(255, 255, 255, 0.82);
-    font-size: 0.88rem;
+    font-size: 0.95rem;
     font-weight: 700;
+    white-space: nowrap;
     text-shadow: 0 2px 12px rgba(0, 0, 0, 0.72);
     transition: color var(--transition), transform var(--transition);
 }
@@ -200,7 +202,7 @@ textarea {
 }
 
 .nav-cta {
-    margin-left: 8px;
+    margin-left: 24px;
     color: white;
     background: var(--accent);
     border-radius: var(--radius);
@@ -555,13 +557,15 @@ section {
     position: relative;
     z-index: 2;
     display: grid;
-    grid-template-columns: minmax(0, 0.54fr) minmax(320px, 0.46fr);
+    grid-template-columns: 1fr;
     align-items: center;
-    text-align: left;
+    justify-items: center;
+    text-align: center;
 }
 
 .hero-content {
     max-width: 720px;
+    margin: 0 auto;
 }
 
 .eyebrow {
@@ -569,7 +573,7 @@ section {
     align-items: center;
     margin-bottom: 16px;
     color: var(--accent);
-    font-size: 0.76rem;
+    font-size: clamp(0.98rem, 1.18vw, 1.12rem);
     font-weight: 900;
     text-transform: uppercase;
 }
@@ -593,6 +597,7 @@ h1 {
 
 .hero h1 {
     max-width: none;
+    margin: 0 auto;
     color: white;
     font-size: clamp(2.1rem, 3.25vw, 3.55rem);
     text-shadow: 0 18px 42px rgba(0, 0, 0, 0.72);
@@ -694,12 +699,12 @@ h3 {
 
 .page-hero .section-heading {
     max-width: 860px;
-    margin: 0;
-    text-align: left;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .page-hero .section-heading .eyebrow {
-    justify-content: flex-start;
+    justify-content: center;
 }
 
 .page-description,
@@ -770,13 +775,18 @@ h3 {
 }
 
 .tag-row span {
-    padding: 7px 10px;
-    border: 1px solid rgba(74, 7, 24, 0.22);
-    border-radius: var(--radius);
+    display: inline-flex;
+    align-items: center;
+    min-height: 26px;
+    padding: 2px 0;
+    border: 0;
+    border-radius: 0;
     color: var(--accent);
-    background: rgba(74, 7, 24, 0.07);
-    font-size: 0.78rem;
-    font-weight: 800;
+    background: transparent;
+    font-size: 0.76rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
 }
 
 .split-grid,
@@ -785,7 +795,26 @@ h3 {
     display: grid;
     grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1fr);
     align-items: center;
+    justify-items: center;
     gap: 64px;
+}
+
+.section-copy {
+    width: 100%;
+    max-width: 720px;
+    text-align: center;
+}
+
+.section-copy .eyebrow {
+    justify-content: center;
+}
+
+.section-copy h1,
+.section-copy h2,
+.section-copy h3,
+.section-copy p {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .section-copy p,
@@ -971,6 +1000,20 @@ h3 {
     grid-template-columns: repeat(4, 1fr);
 }
 
+.services:not(.preview-section) .services-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    width: min(100%, 980px);
+    margin: 0 auto;
+}
+
+.services .service-card {
+    text-align: center;
+}
+
+.services .service-icon {
+    margin-inline: auto;
+}
+
 .projects-grid {
     grid-template-columns: repeat(2, minmax(320px, 420px));
     justify-content: center;
@@ -979,6 +1022,8 @@ h3 {
 .project-showcase {
     display: grid;
     gap: 0;
+    width: min(100%, 1040px);
+    margin: 0 auto;
     border: 1px solid var(--line);
     border-radius: var(--radius);
     overflow: hidden;
@@ -1071,13 +1116,19 @@ h3 {
 
 .team-placeholder-grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 28px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    justify-content: center;
+    justify-items: center;
+    gap: 24px;
+    width: min(100%, 980px);
+    margin: 0 auto;
 }
 
 .team-photo-placeholder {
     position: relative;
     display: block;
+    width: 100%;
+    max-width: 220px;
     aspect-ratio: 1 / 1;
     padding: 0;
     border: 0;
@@ -1391,8 +1442,8 @@ h3 {
 
 .project-feature {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    min-height: 430px;
+    grid-template-columns: minmax(0, 0.94fr) minmax(0, 1fr);
+    min-height: 340px;
     width: 100%;
     border: 0;
     border-bottom: 1px solid var(--line);
@@ -1423,13 +1474,13 @@ h3 {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-height: 430px;
-    padding: clamp(34px, 5vw, 78px);
+    min-height: 340px;
+    padding: clamp(28px, 4vw, 54px);
 }
 
 .project-feature .project-content h3 {
     max-width: 520px;
-    font-size: clamp(1.65rem, 2.8vw, 2.65rem);
+    font-size: clamp(1.45rem, 2.3vw, 2.15rem);
 }
 
 .project-feature .project-content p {
@@ -1443,8 +1494,19 @@ h3 {
     margin-top: 24px;
 }
 
+.project-actions .detail-modal-trigger {
+    width: auto;
+    text-align: center;
+    color: #ffffff;
+}
+
+.project-actions .detail-modal-trigger:hover,
+.project-actions .detail-modal-trigger:focus-visible {
+    color: #ffffff;
+}
+
 .project-image-panel {
-    min-height: 430px;
+    min-height: 340px;
     overflow: hidden;
     background: var(--primary-deep);
 }
@@ -2276,6 +2338,15 @@ h3 {
 .site-footer a:hover {
     color: var(--accent);
     transform: translateX(4px);
+}
+
+.footer-address {
+    max-width: 230px;
+    margin-top: 10px;
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 0.88rem;
+    font-weight: 700;
+    line-height: 1.55;
 }
 
 .social-links {
